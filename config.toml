@@ -6,7 +6,6 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 theme = "hugo-sustain"
-highlight = true
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
@@ -16,6 +15,7 @@ highlight = true
   author = "Vladimir Alexeev"
   description = "Home blog"
 
+
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
   custom_js  = []
@@ -24,7 +24,7 @@ highlight = true
   Github        = "som3"
   Email         = "email@valekseev.me"
   Twitter       = "Som3t1me5"
-  LinkedIn      = "username"
+  LinkedIn      = "vladimir-alekseev-95ba93b8"
 
 ## Main Menu
 [[menu.main]]
@@ -42,3 +42,6 @@ highlight = true
   identifier = "resume"
   weight = 300
   url = "/resume/"
+
+[taxonomies]
+tag = "tags"
