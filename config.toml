@@ -1,4 +1,4 @@
-baseurl = "https://valekseev.me/"
+baseurl = "https://som3.github.io/"
 languageCode = "en-US"
 title = "Vladimir Alexeev"
 # Enable comments by entering your Disqus shortname
@@ -6,6 +6,7 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 theme = "hugo-sustain"
+highlight = true
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
@@ -24,7 +25,6 @@ theme = "hugo-sustain"
   Email         = "email@valekseev.me"
   Twitter       = "Som3t1me5"
   LinkedIn      = "username"
- # Stackoverflow = "username"
 
 ## Main Menu
 [[menu.main]]
