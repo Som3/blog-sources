@@ -1,0 +1,44 @@
+baseurl = "https://valekseev.me/"
+languageCode = "en-US"
+title = "Vladimir Alexeev"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "avatar.jpg"
+  author = "Vladimir Alexeev"
+  description = "Home blog"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "som3"
+  Email         = "email@valekseev.me"
+  Twitter       = "Som3t1me5"
+  LinkedIn      = "username"
+ # Stackoverflow = "username"
+
+## Main Menu
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
+[[menu.main]]
+  name = "resume"
+  identifier = "resume"
+  weight = 300
+  url = "/resume/"
