@@ -1,6 +1,6 @@
-baseurl = "https://som3.github.io/"
+baseurl = "http://valekseev.me/"
 languageCode = "en-US"
-title = "Vladimir Alexeev"
+title = "Vladimir Alekseev"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
@@ -12,9 +12,10 @@ theme = "hugo-sustain"
 
 [params]
   avatar = "avatar.jpg"
-  author = "Vladimir Alexeev"
+  author = "Vladimir Alekseev"
   description = "Home blog"
-
+  website = "valekseev.me"
+  website_full = "http://valekseev.me/"
 
   # Custom assets can be linked with their paths relative to static/
   custom_css = []
@@ -22,7 +23,7 @@ theme = "hugo-sustain"
 
 [params.social]
   Github        = "som3"
-  Email         = "email@valekseev.me"
+  Email         = "som3t1me5@gmail.com"
   Twitter       = "Som3t1me5"
   LinkedIn      = "vladimir-alekseev-95ba93b8"
 
@@ -32,11 +33,6 @@ theme = "hugo-sustain"
   weight = 100
   identifier = "blog"
   url = "/blog/"
-[[menu.main]]
-  name = "projects"
-  identifier = "projects"
-  weight = 200
-  url = "/projects/"
 [[menu.main]]
   name = "resume"
   identifier = "resume"

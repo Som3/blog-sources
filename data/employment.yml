@@ -1,0 +1,18 @@
+name: Employment
+source:
+  - prof: Java Developer (CloudAlly.com)
+    place: Kazan, RU
+    time: November 2016 to present
+    description: Development system of auto-scaling and managment arround 600 machines, extension portfolio of supports services.
+
+  - prof: Java Developer (I-Novus.ru)
+    place: Kazan, RU
+    time: March 2016 to October 2016
+    description: Support and development of internal RAD framework. Development of systems RMIS (Regional medical information system), EGIZS (The unified state information system in healthcare)
+
+
+  - prof: Java Developer (Dz.ru)
+    place: Kazan, RU
+    time: May 2015 to Jule 2015
+    description: "Development Ulmart.ru, integration with third-party services: SAP, Uniteller, fias."
+    

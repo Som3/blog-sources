@@ -1,0 +1,105 @@
+{{ if .Params.commentIssueId }}
+  	<div class="comments-container">
+		<h2>Comments</h2>
+    	<div id="header">
+        	Want to leave a comment? Visit <a href="https://github.com/Som3/som3.github.io/issues/{{.Params.commentIssueId}}"> this post's issue page on GitHub</a> (you'll need a GitHub account. What? Like you already don't have one? :).
+    	</div>
+
+    <div id="comments"></div>
+		</ul>
+	</div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+      var currentPage = 0;
+      var lastPage;
+      
+      function loadComments(data, header) {
+          if (data.length > 0 && currentPage === 0) {
+            $("#comments").append('<ul id="comments-list" class="comments-list"></ul><div id="next"></div>')
+          }
+          currentPage++;
+          var nextPageUrl = getNextPageUrl(header)
+
+          for (var i=0; i < data.length; i++) {
+              var cuser = data[i].user.login;
+              var cuserlink = "https://www.github.com/" + data[i].user.login;
+              var clink = "https://github.com/Som3/som3.github.io/issues/{{.Params.commentIssueId}}#issuecomment-" + 
+                  data[i].url.substring(data[i].url.lastIndexOf("/") + 1);
+              var cbody = data[i].body_html;
+
+              if (cbody)
+
+              var cavatarlink = data[i].user.avatar_url;
+              var cdate = data[i].created_at;
+              var isAutor = cuser.toUpperCase() === {{ .Site.Params.social.Github }}.toUpperCase()
+              
+              var authorStyle = isAutor ? "by-author" : "";
+
+              var img = "<div class='comment-avatar'><a href='" + cuserlink  + "'><img src=" + cavatarlink + " alt=''/></a></div>"
+              var date = "<a href='" + clink + "'><span>" + cdate + "</span></a>"
+
+              $("#comments-list").append("<li><div class='comment-main-level'>" + img 
+                + '<div class="comment-box"><div class="comment-head"><h6 class="comment-name ' +  authorStyle +
+                '"><a href=' + cuserlink + '>' + cuser + '</a></h6>' + date + '</div>'
+                + '<div class="comment-content">' + cbody + '</div></div></div></li>')
+              replaceEmoji()
+          }
+          $("#next").empty()
+          if (nextPageUrl != null) {
+            $("#next").append('<div><button id="button-next">next</button></div>')
+            $("#button-next").on('click', function(e) {
+              $("#button-next").on('click', function() {})
+              $("#button-next").addClass( "onclic");
+              e.preventDefault();
+              getComments(nextPageUrl)
+            })
+          }
+      }
+
+      getComments('https://api.github.com/repos/Som3/som3.github.io/issues/{{.Params.commentIssueId}}/comments?per_page=15')
+
+      function getComments(url) {
+        $.ajax(url, {
+          headers: {Accept: "application/vnd.github.full+json"},
+          
+          success: function(data, status, request) {
+              loadComments(data, request.getResponseHeader("Link"));
+          },
+
+          error: function() {
+            alert("GitHub API rate limit exceeded, comments not displayed, try again later. \n or go to the GitHub (link on below post) to read ")
+          }
+        })
+      }
+
+      function getNextPageUrl(header) {
+        if (header == null) {
+          return null
+        }
+        var links = header.split(',')
+        if (isNextPageLink(links[0].split(';')[1].trim())) {
+          var val = links[0].split(';')[0]
+          return val.substring(val.lastIndexOf('<') + 1, val.lastIndexOf('>'))
+        }
+        if (isNextPageLink(links[1].split(';')[1].trim())) {
+          var val = links[1].split(';')[0]
+          return val.substring(val.lastIndexOf('<') + 1, val.lastIndexOf('>'))
+        }
+        return null
+      }
+
+      function isNextPageLink(rel) {
+        return rel === 'rel="next"'
+      }
+
+      function replaceEmoji() {
+        var emoji = $("g-emoji");
+        var src = emoji.attr("fallback-src");
+        emoji.replaceWith("<img height='20' width='20' src='" + src + "'>")
+      }
+  </script>
+  <br/>
+{{ end }}
+	

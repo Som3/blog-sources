@@ -4,11 +4,13 @@
       <!-- Header -->
       {{ partial "header" . }}
       <div class="container">
+      {{ if .Site.Taxonomies.tags }}
         <h4>Tags: &nbsp;&nbsp;
           {{ range $el, $taxonomy := .Site.Taxonomies.tags }}
             <a href="/tags/{{ $el | urlize}}"><span class="label label-primary">{{ $el }}</span></a>
           {{ end }}
         </h4>
+        {{ end }}
           <div class="panel panel-default">
             <div class="panel-body">
             {{ range .Data.Pages.ByPublishDate }}

@@ -1,0 +1,11 @@
+name: Programming Skills
+title: Software engineering & web development
+source:
+  - name: [Java, Git]
+    stars: 4
+
+  - name: [Javascript, SQL]
+    stars: 3
+
+  - name: [Linux, Scala]
+    stars: 2
