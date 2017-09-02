@@ -18,7 +18,7 @@
           {{ .Date.Format "January 2, 2006" }}
             &nbsp;&nbsp;
             {{ range .Params.tags }}
-              <a href="/tags/{{ . | urlize }}"><span class="label label-primary">{{ . }}</span></a>
+              <a href="/tags/{{ . | urlize }}" class="tag-a"><span class="label tag">{{ . }}</span></a>
             {{ end }}
           </h4>
         </div>

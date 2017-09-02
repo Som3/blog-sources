@@ -1,11 +1,13 @@
 baseurl = "http://valekseev.me/"
 languageCode = "en-US"
-title = "Vladimir Alekseev"
+title = "Home"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 theme = "hugo-sustain"
+ignoreFiles = ["optimize-aws\\.mdown"]
+
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
@@ -23,7 +25,7 @@ theme = "hugo-sustain"
 
 [params.social]
   Github        = "som3"
-  Email         = "som3t1me5@gmail.com"
+  Email         = "valekseev@protonmail.com"
   Twitter       = "Som3t1me5"
   LinkedIn      = "vladimir-alekseev-95ba93b8"
 
@@ -41,3 +43,4 @@ theme = "hugo-sustain"
 
 [taxonomies]
 tag = "tags"
+category = "category"

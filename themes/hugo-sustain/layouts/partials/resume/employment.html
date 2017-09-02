@@ -3,13 +3,14 @@
   {{ range .Site.Data.employment.source }}
   <article>
     <header>
-      <h1>{{ .prof }}</h1>
+      <h1>{{ .prof }} at the  <a href="{{.companyURL}}">{{.company}}</a></h1>
       <span>
         <address>{{ .place }}</address>
         <time>{{ .time }}</time>
       </span>
     </header>
     <p>{{ .description }}</p>
+    {{ if .stack }} <p><b>Stack:</b> {{ range .stack}} <span class="label label-default">{{ . }}</span> {{ end }} </p> {{ end }}
   </article>
   {{ end }}
 </section>

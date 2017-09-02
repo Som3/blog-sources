@@ -1,18 +1,26 @@
 name: Employment
 source:
-  - prof: Java Developer (CloudAlly.com)
+  - prof: Java Developer
     place: Kazan, RU
     time: November 2016 to present
-    description: Development system of auto-scaling and managment arround 600 machines, extension portfolio of supports services.
+    description: Design & development system of auto-scaling and managment arround 600 machines, extension portfolio of supports services, design & implementation public API, migration from SimpleDB to MongoDB.
+    stack: [Java8, AWS, SimpleDB, MongoDB, Elasticsearch, Lucene, Spring Boot, ActiveMQ]
+    company: CloudAlly
+    companyURL: https://www.cloudally.com/
 
-  - prof: Java Developer (I-Novus.ru)
+  - prof: Java Developer
     place: Kazan, RU
     time: March 2016 to October 2016
-    description: Support and development of internal RAD framework. Development of systems RMIS (Regional medical information system), EGIZS (The unified state information system in healthcare)
+    description: Support and development of internal RAD framework (like as Android layouts on XML). Development of systems RMIS (Regional medical information system), EGIZS (The unified state information system in healthcare)
+    stack: [Java8, Spring core, Spring securiry, PostgreSQL, Hibernate]
+    company: I-Novus
+    companyURL: http://i-novus.ru/
 
-
-  - prof: Java Developer (Dz.ru)
+  - prof: Junior Java Developer
     place: Kazan, RU
     time: May 2015 to Jule 2015
     description: "Development Ulmart.ru, integration with third-party services: SAP, Uniteller, fias."
+    stack: [Java7, Spring MVC, MySQL]
+    company: Digital Zone
+    companyURL: http://dz.ru/
     

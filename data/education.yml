@@ -6,3 +6,9 @@ source:
     date: 2013 to 2017
     type: thesis
     description: Optimizing the use of computing resources Amazon Web Services
+  - title: Information systems and technology
+    univ: Kazan National Research Technical University
+    place: Kazan, RU
+    date: 2017 to present
+    # type: dissertation
+    # description: still not ready

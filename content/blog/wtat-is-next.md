@@ -1,8 +1,8 @@
 +++
 author = "Vladimir Alekseev"
-date = "2017-06-16"
+date = "2017-07-24"
 title = "What's next?"
-linktitle = "What is next?"
+category = "life"
 tags = ["life"]
 commentIssueId = 1
 +++

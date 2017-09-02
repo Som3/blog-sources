@@ -1,0 +1,21 @@
++++
+author = "Vladimir Alekseev"
+date = "2017-07-26"
+title = "As we optimized cost AWS infrastructure utilization"
+category = "programming"
+tags = ["programming", "AWS", "architecture"]
+commentIssueId = 2
++++
+
+## **Preface**
+In one of company where I worked - used AWS EC2. Been written system of auto-scaling which managed up to 600 instances EC2. 
+Product owner was not satisfied cost of this infrastructure, the development team was assigned task - decrease cost. <br/>
+A little bit about project: it's cloud service which processes vast amounts of user data every day on schedule.
+
+### Solution
+- using faster machines to reduce the uptime
+- distributing tasks on heterogeneous machines depending on the heaviness of the task
+- using SPOT requests
+- prediction of the time required to complete the task
+
+## **The analysis of old solutions**

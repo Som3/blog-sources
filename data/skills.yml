@@ -1,11 +1,20 @@
 name: Programming Skills
 title: Software engineering & web development
 source:
-  - name: [Java, Git]
-    stars: 4
+  - type: Languages
+    list: [Java, Scala, Haskell]
+  
+  - type: Technologies
+    list: [PostgreSQL, SimpleDB, MongoDB, Elasticsearch, Lucene, AWS EC2, AWS S3, ActiveMQ, Memcached]
 
-  - name: [Javascript, SQL]
-    stars: 3
+  - type: Framelibs
+    list: [Spring, Spring MVC, Spring Security, Spring JPA, Spring Boot, Vert.x, Hibernate, Guice]
 
-  - name: [Linux, Scala]
-    stars: 2
+  - type: Tools
+    list: [IntelliJ IDEA, Jenkins, TeamCity, Git, Jira]
+
+  - type: Testing
+    list: [JUnit, TestNG, Mockito, Selenium]
+
+  - type: Other
+    list: [REST API, SOAP, Functional Programming, Object-oriented programming, JSON Web Token, Continuous Integration, Scrum, Linux]

@@ -4,10 +4,10 @@
       <!-- Header -->
       {{ partial "header" . }}
       <div class="container">
-      {{ if .Site.Taxonomies.tags }}
-        <h4>Tags: &nbsp;&nbsp;
-          {{ range $el, $taxonomy := .Site.Taxonomies.tags }}
-            <a href="/tags/{{ $el | urlize}}"><span class="label label-primary">{{ $el }}</span></a>
+      {{ if .Site.Taxonomies.category }}
+        <h4>Category: &nbsp;&nbsp;
+          {{ range $el, $taxonomy := .Site.Taxonomies.category }}
+            <a href="/category/{{ $el | urlize}}" class="tag-a"><span class="label tag">{{ $el }}</span></a>
           {{ end }}
         </h4>
         {{ end }}
