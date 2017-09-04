@@ -3,7 +3,7 @@
   {{ range .Site.Data.employment.source }}
   <article>
     <header>
-      <h1>{{ .prof }} at the  <a href="{{.companyURL}}">{{.company}}</a></h1>
+      <h1>{{ .prof }} at the  <a target="_blank" href="{{.companyURL}}" class="company">{{.company}}</a></h1>
       <span>
         <address>{{ .place }}</address>
         <time>{{ .time }}</time>

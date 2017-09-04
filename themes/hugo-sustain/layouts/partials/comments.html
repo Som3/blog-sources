@@ -1,4 +1,5 @@
 {{ if .Params.commentIssueId }}
+    <div class="row">
   	<div class="comments-container">
 		<h2>Comments</h2>
     	<div id="header">
@@ -33,9 +34,9 @@
 
               var cavatarlink = data[i].user.avatar_url;
               var cdate = data[i].created_at;
-              var isAutor = cuser.toUpperCase() === {{ .Site.Params.social.Github }}.toUpperCase()
+              var isAuthor = cuser.toUpperCase() === {{ .Site.Params.social.Github }}.toUpperCase()
               
-              var authorStyle = isAutor ? "by-author" : "";
+              var authorStyle = isAuthor ? "by-author" : "";
 
               var img = "<div class='comment-avatar'><a href='" + cuserlink  + "'><img src=" + cavatarlink + " alt=''/></a></div>"
               var date = "<a href='" + clink + "'><span>" + cdate + "</span></a>"
@@ -101,5 +102,6 @@
       }
   </script>
   <br/>
+  </div>
 {{ end }}
 	

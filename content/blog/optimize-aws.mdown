@@ -8,7 +8,7 @@ commentIssueId = 2
 +++
 
 ## **Preface**
-In one of company where I worked - used AWS EC2. Been written system of auto-scaling which managed up to 600 instances EC2. 
+Been written system of auto-scaling which managed up to 600 instances EC2. 
 Product owner was not satisfied cost of this infrastructure, the development team was assigned task - decrease cost. <br/>
 A little bit about project: it's cloud service which processes vast amounts of user data every day on schedule.
 
@@ -18,4 +18,27 @@ A little bit about project: it's cloud service which processes vast amounts of u
 - using SPOT requests
 - prediction of the time required to complete the task
 
-## **The analysis of old solutions**
+## **The analysis of old solution**
+<img class="post-img" src="/posts/aws-optimize/old-solution-mini.png" title="Old architecture solution">
+
+- `Dispatcher` is load balancer, it assign tasks according to the exists EC2 instances `Processor` or creates new instances if need.
+- On one processor may be maximum 200 tasks, also Dispatcher classify tasks by complexity and heavy task = N lite tasks.
+- Each processor have its queue, when queue is empty - processor send message to terminate queue and waits for Dispather shutdown it.
+- Heavy tasks distributed so that 1 processor is no more K heavy task.
+- Processors is On-Demand EC2 instances
+ 
+<img class="post-img" src="/posts/aws-optimize/old-flow.png" title="Old flow">
+After processor sends `All job finished` message - dispatcher shutdown instance.
+
+### Problems
+ - bottleneck heavy tasks - lite tasks had to wait if on machine accumulated many heavy tasks. lite tasks much more on system, but heavy task can be processed a long time (up to month).
+ - queues overhead.
+ - launching overhead - instance can be turned on several times within the hour. 
+ - not uniform distributed - dispacher start new instance if in current moment all instances is busy, but they could be free after a few minutes.
+
+### Configuration of old enviroment
+- **Instance type:** m1.large
+- **Pricing model:** on-demand + reserved instances
+- **Quantity:** (US EAST) 50 instances on regular workload, 200 instances peak (assuming 25%). 20-100 GB HDD usage per instance
+- **Storage size:** 2x420 GB 
+## **New design**
