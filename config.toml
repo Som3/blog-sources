@@ -6,7 +6,7 @@ disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 theme = "hugo-sustain"
-ignoreFiles = []
+ignoreFiles = ["wtat-is-next", "optimize-aws"]
 
 
 [permalinks]
