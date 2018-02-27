@@ -4,9 +4,9 @@ title = "Home"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-114865222-1"
 theme = "hugo-sustain"
-ignoreFiles = ["wtat-is-next", "optimize-aws"]
+ignoreFiles = ["wtat-is-next", "optimize-aws", "madness-week"]
 
 
 [permalinks]
