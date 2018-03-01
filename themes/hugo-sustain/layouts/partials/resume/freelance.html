@@ -1,0 +1,16 @@
+<section>
+  <h1>{{ .Site.Data.freelance.name }}</h1>
+  {{ range .Site.Data.freelance.source }}
+  <article>
+    <header>
+      <h1>{{ .project }}</h1>
+      <span>
+        {{ if .site }} <address>{{ .site }}</address> {{ end }}
+        <time>{{ .time }}</time>
+      </span>
+    </header>
+    <p>{{ .description }}</p>
+    {{ if .stack }} <p><b>Stack:</b> {{ range .stack}} <span class="label label-default">{{ . }}</span> {{ end }} </p> {{ end }}
+  </article>
+  {{ end }}
+</section>
