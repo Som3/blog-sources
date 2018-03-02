@@ -1,0 +1,53 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      {{ partial "header" . }}
+      <div class="container"> 
+      	<div class="col-md-3">
+			  <img src="{{ .Site.BaseURL }}img/{{ .Site.Params.avatar }}" class="me">
+  			<h1>{{ .Site.Params.author }}</h1>
+        <p>
+          <a href="{{ .Site.Params.website_full }}">{{ .Site.Params.website }}</a>
+        </p>
+        <br/>
+  			<p>
+				  <a href="mailto:{{ .Site.Params.social.Email }}">{{ .Site.Params.social.Email }}</a> <br/>
+			    <a href="http://github.com/{{ .Site.Params.social.Github }}"><i class="fa fa-github"></i>&nbsp;Github</a> /
+			    <a href="http://twitter.com/{{ .Site.Params.social.Twitter }}"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+        </p>
+        </div>
+        <div class="col-md-9" style="text-align: left;">
+          <h3>Как я и сказал в своём <a href="/blog/febrary-digest/">недавнем посте</a>, стырив идею у Романа, решил сделать свой `TODO` лист.</h3>
+          Далее я вам представляю список своих планов на 2018 год, он будет корректироваться по ходу этого длинного года.
+          <br/>
+          
+          <table style="width: 100%; margin-top: 30px; border-top: 2px solid #34495E; border-bottom: 2px solid #34495E">
+            <thread style="border-bottom: 2px solid #34495E;">
+              <th></th>
+              <th>Задача</th>
+              <th>Описание</th>
+              <th>Статус</th>
+            </thread>
+            <tbody>
+              <tr style="border-top: 1px solid #34495E; ">
+                <td style="padding: 5px; text-align: center;">#</td>
+                <td>#</td>
+                <td>#</td>
+                <td>#</td>
+              </tr>
+              <tr style="border-top: 1px solid #34495E; ">
+                <td style="padding: 5px">#</td>
+                <td>#</td>
+                <td>#</td>
+                <td>#</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    {{ partial "footer" . }}
+  </body>
+</html>

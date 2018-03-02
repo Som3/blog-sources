@@ -32,14 +32,15 @@ ignoreFiles = ["wtat-is-next", "optimize-aws", "madness-week"]
 ## Main Menu
 [[menu.main]]
   name = "blog"
-  weight = 100
+  weight = 1
   identifier = "blog"
   url = "/blog/"
 [[menu.main]]
   name = "resume"
   identifier = "resume"
-  weight = 300
+  weight = 2
   url = "/resume/"
+
 
 [taxonomies]
 tag = "tags"
