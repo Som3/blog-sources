@@ -8,7 +8,7 @@ source:
     list: [PostgreSQL, SimpleDB, MongoDB, Elasticsearch, Lucene, AWS EC2, AWS S3, ActiveMQ, Memcached]
 
   - type: Framelibs
-    list: [Spring, Spring MVC, Spring Security, Spring JPA, Spring Boot, Vert.x, Hibernate, Guice]
+    list: [Spring, Spring MVC, Spring Security, Spring JPA, Spring Boot, Vert.x, Hibernate, Guice, Akka-http, Slick]
 
   - type: Tools
     list: [IntelliJ IDEA, Jenkins, TeamCity, Git, Jira]
