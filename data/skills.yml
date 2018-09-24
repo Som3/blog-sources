@@ -2,7 +2,7 @@ name: Programming Skills
 title: Software engineering & web development
 source:
   - type: Languages
-    list: [Java (primary), Scala, Haskell]
+    list: [Java, Scala, Haskell]
   
   - type: Technologies
     list: [PostgreSQL, SimpleDB, MongoDB, Elasticsearch, Lucene, AWS EC2, AWS S3, ActiveMQ, Memcached]

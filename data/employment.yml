@@ -4,14 +4,14 @@ source:
     place: Kazan, RU
     time: November 2016 to present
     description: Design & development system of auto-scaling and managment arround 600 machines, extension portfolio of supports services(new integrations), design & implementation public API, migration from SimpleDB to MongoDB.
-    stack: [Java8, AWS, SimpleDB, MongoDB, Elasticsearch, Lucene, Spring Boot, ActiveMQ]
+    stack: [Java8, AWS EC2, AWS S3, AWS SimpleDB, SimpleDB, MongoDB, Elasticsearch, Lucene, Spring Boot, ActiveMQ]
     company: CloudAlly
     companyURL: https://www.cloudally.com/
 
   - prof: Java Developer
     place: Kazan, RU
     time: March 2016 to October 2016
-    description: Support and development of internal RAD framework (like as Android layouts on XML).
+    description: Support and development of internal [RAD](https://en.wikipedia.org/wiki/Rapid_application_development) framework (like as Android layouts on XML).
     stack: [Java8, Spring core, Spring securiry, PostgreSQL, Hibernate]
     company: I-Novus
     companyURL: http://i-novus.ru/
