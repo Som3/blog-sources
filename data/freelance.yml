@@ -1,8 +1,0 @@
-name: Freelance projects
-source:
-  - project: Owners & Slaves
-    time: September 2017 to May 2018
-    # site:
-    description: Implementation API for social network. The choice of the stack and all architectural decisions.
-    stack: [Java8, Spring Boot, Docker, Spring Boot WebSocket, Spring Data JPA, liquibase, Postgresql, h2, Undertow]
-

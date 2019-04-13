@@ -1,8 +1,0 @@
-name: Education
-source:
-  - title: Computer Science
-    univ: Kazan Federal University
-    place: Kazan, RU
-    date: 2013 to 2017
-    type: thesis
-    description: Optimizing the use of computing resources Amazon Web Services

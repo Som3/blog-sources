@@ -1,47 +1,62 @@
-baseurl = "http://valekseev.me/"
-languageCode = "en-US"
-title = "Home"
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = "UA-114865222-1"
-theme = "hugo-sustain"
-ignoreFiles = ["wtat-is-next", "optimize-aws", "madness-week"]
+baseURL = "http://valekseev.me"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Vladimir Alekseev"
+theme = "hermit"
+# enableGitInfo = true
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+hasCJKLanguage = true  # If there're Chinese/Japanese/Korean Languages in the content, enable this.
+rssLimit = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+# googleAnalytics = "UA-123-45"
+# disqusShortname = "yourdiscussshortname"
 
+[author]
+  name = "Vladimir Alekseev"
 
-[permalinks]
-  post = "/:year/:month/:day/:slug"
-
-[params]
-  avatar = "avatar.jpg"
-  author = "Vladimir Alekseev"
-  description = "Home blog"
-  website = "valekseev.me"
-  website_full = "http://valekseev.me/"
-
-  # Custom assets can be linked with their paths relative to static/
-  custom_css = []
-  custom_js  = []
-
-[params.social]
-  Github        = "som3"
-  Email         = "valekseev@protonmail.com"
-  Twitter       = "Som3t1me5"
-  LinkedIn      = "vladimir-alekseev-95ba93b8"
-
-## Main Menu
-[[menu.main]]
-  name = "blog"
-  weight = 1
-  identifier = "blog"
-  url = "/blog/"
-[[menu.main]]
-  name = "resume"
-  identifier = "resume"
-  weight = 2
-  url = "/resume/"
-
+[blackfriday]
+  hrefTargetBlank = true
 
 [taxonomies]
-tag = "tags"
-category = "category"
+  tag = "tags"
+  category = ""  # Categories are disabled by default.
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # themeColor = "#494f5c"  # Theme color in meta tags.
+  homeSubtitle = "Software Engineer"
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # gitUrl = "https://github.com/Someone/SomeRepo/commit/" # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  justifyContent = false  # Set "text-align: justify" to .content, requires extended version of Hugo
+  # bgImg = ""  #  Homepage background-image URL
+  # customCSS = ["css/foo.css", "css/bar.css"]  # add custom css
+  # Social Icons
+  # Check https://github.com/Track3/hermit#social-icons for more info.
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/Som3"
+    
+  [[params.social]]
+    name = "linkedin"
+    url = "http://linkedin.com/in/vladimir-alekseev"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:valekseev@pm.me"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/Som3t1me5"
+
+[menu]
+
+  [[menu.main]]
+    name = "CV"
+    url = "/cv.pdf"
+    weight = 10

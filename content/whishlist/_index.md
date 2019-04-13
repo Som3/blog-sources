@@ -1,4 +1,0 @@
----
-title: "Whishlist"
-isResume: true
----
